@@ -1,0 +1,137 @@
+:root {
+  --bright-cyan: #4ABDAC;
+  --cyan: #04ae94;
+  --orange: #FC4A1A;
+  --red: #c70f0f;
+  --light-color: #DFDCE3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bright-cyan);
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: url("./pointinghand.png"), auto;
+}
+input {
+  cursor: url("./pointinghand.png"), auto;
+}
+#main {
+  max-width: 900px;
+  height: 300px;
+  margin: auto;
+  transform: translateY(50%);
+}
+.container {
+  width: 100%;
+  background-color: var(--light-color);
+  border-radius: 15px;
+  padding: 40px 5px;
+  margin: 0 auto;
+}
+#main .game-header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--cyan);
+  color: var(--light-color);
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+}
+#main .title-hearts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 40px;
+  padding: 0 15px;
+}
+#main .title-hearts-container .choose-number {
+  color: var(--cyan);
+}
+#main .hearts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .heart {
+  color: var(--orange);
+  font-size: 28px;
+}
+#main .remaining-guesses {
+  margin-left: 6px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--cyan);
+  animation: zoom-in 1s 2;
+}
+@keyframes zoom-in {
+  0% {transform: scale(0);}
+  50% {transform: scale(1.6);}
+  100% {transform: scale(0);}
+}
+
+#main .circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+#main .circle-container .circle {
+  width: 200px;
+  height: 200px;
+  border: 10px solid var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .circle-container .circle span {
+  font-size: 100px;
+  font-weight: 600;
+}
+#main .user-guess {
+  margin-top: 40px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+#main .user-guess #guessed-number {
+  width: 200px;
+  outline: none;
+  border: 2px solid var(--cyan);
+  padding: 15px 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#main .user-guess #submit-btn {
+  padding: 15px 10px;
+  outline: none;
+  border: none;
+  background-color: var(--bright-cyan);
+  color: var(--light-color);
+  font-size: 16px;
+  box-shadow: 2px 5px var(--cyan);
+  margin-left: 10px;
+
+}
+#main .user-guess #submit-btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+#main .msg-container {
+  margin-left: 15px;
+  border: 2px solid var(--orange);
+  border-radius: 15px;
+  padding: 10px;
+  animation-name: message;
+  animation-duration: 0.2s;
+  animation-iteration-count: 2;
+}
+@keyframes message {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}

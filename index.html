@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <title>Guesss My Number!</title>
+</head>
+<body>
+  <section id="main">
+    <div class="container">
+      <div class="game-header">
+        <h2>Guesss My Number Game!</h2>
+      </div>
+      <div class="title-hearts-container">
+        <div class="choose-number">
+          <h2>Choose A Number Between <span class="min-num"></span> - <span class="max-num"></span></h2>
+        </div>
+        <div class="hearts">
+          <span class="heart">❤</span>
+          <span class="remaining-guesses"></span>
+        </div>
+      </div>
+      <div class="circle-container">
+        <div class="circle"><span>?</span></div>
+      </div>
+      <div class="user-guess">
+        <input type="number" id="guessed-number" placeholder="Your Guess Here...">
+        <input type="button" id="submit-btn" value="Submit">
+        <div class="msg-container"><h3 class="msg"></h3></div>
+      </div>
+    </div>
+  </section>
+  <script src="./app.js"></script>
+</body>
+</html>
