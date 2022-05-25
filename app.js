@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 submit.addEventListener("click", guessedNumber);
 game.addEventListener("mousedown", function (e) {
   if (e.target.className === "play-again") {
+    document.querySelector(".msg-container").style.display = "none";
     window.location.reload();
   }
 });
