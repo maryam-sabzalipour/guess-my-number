@@ -13,6 +13,10 @@
 body {
   background-color: var(--bright-cyan);
   font-family: Arial, Helvetica, sans-serif;
+  cursor: url("./pointinghand.png"), auto;
+}
+input {
+  cursor: url("./pointinghand.png"), auto;
 }
 #main {
   max-width: 900px;
