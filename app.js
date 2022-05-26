@@ -3,6 +3,7 @@ let min = 1,
   max = 10,
   winningNumber = getRandomNumber(min, max),
   remainingGuesses = 5;
+  mousedownFired = false;
 
 //UI Elements
 const minNum = document.querySelector(".min-num"),
@@ -26,12 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
 submit.addEventListener("click", guessedNumber);
 game.addEventListener("mousedown", function (e) {
   if (e.target.className === "play-again") {
+	mousedownFired = true;
     window.location.reload();
   }
 });
 
 //ّFunctions
 function guessedNumber() {
+  if (mousedownFired) {
+    mousedownFired = false;
+	return;
+  }
   userInputNum = Number(userInput.value);
   if (
     userInputNum > max ||
